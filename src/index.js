@@ -1,8 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-
-const Elem = () => {
-    return <h1>Hello world</h1>
-}
-
-ReactDOM.render(<Elem />, document.getElementById('root'));
+import App from './components/App/App';
+import { Provider } from 'react-redux'
+import store from "./redux/reducer";
+ReactDOM.render(
+  <Provider store={store}>
+    <App />
+  </Provider>, document.getElementById('root'));
