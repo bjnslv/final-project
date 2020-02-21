@@ -9,12 +9,16 @@ export default class Nav extends Component {
           <ul className="navbar-nav mr-auto">
             <li className="nav-item">
               <button type="button" className="btn btn-danger">
-                <NavLink exact to="/"className="btn btn-outline-light my-2 my-sm-0 margin">Home</NavLink>
+                <NavLink exact to="/"className="btn btn-outline-light my-2 my-sm-0 margin">
+                  Home
+                </NavLink>
               </button>
             </li>
             <li className="nav-item">
               <button type="button" className="btn btn-danger">
-                <NavLink exact to="/collection"className="btn btn-outline-light my-2 my-sm-0 margin">Collection</NavLink>
+                <NavLink exact to="/collection"className="btn btn-outline-light my-2 my-sm-0 margin">
+                  Collection
+                </NavLink>
               </button>
             </li>
           </ul>

@@ -2,7 +2,7 @@ import { connect } from 'react-redux';
 import Home from "./Home";
 
 const mapStateToProps = ({ pokemons }) => ({
-  pokemons
+    pokemons
 });
 
 export default connect(

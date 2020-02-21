@@ -3,7 +3,7 @@ import { composeWithDevTools } from 'redux-devtools-extension';
 import thunk from 'redux-thunk';
 
 const initialState = {
-    pokemons: []
+    pokemons: [],
 };
 
 const reducer = (state = initialState, { type, payload }) => {
@@ -14,7 +14,7 @@ const reducer = (state = initialState, { type, payload }) => {
                     id,
                     name,
                     url: null,
-                    isCatched: true
+                    isCatched: false
                 })) 
             };
         case 'CATCH_POKEMON':

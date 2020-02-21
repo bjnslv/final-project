@@ -4,6 +4,7 @@ import "./Home"
 
 
 const Home = ({ pokemons }) => {
+  
   const elements = pokemons.map(item => {
     return <Card {...item} key={item.id}/>;
   });

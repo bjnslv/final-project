@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 
 class Pokemon extends Component {
-  
   render() {
     const { name, isCaught, id } = this.props;
     const srcImg = `../../../pokemons/${id}.png`;

@@ -7,6 +7,7 @@ export default class JsonService {
     if(!result.ok) {
       throw new Error (`Couldn't fetch ${url}, received ${result.status}`)
     }
+    
     let sas = await result.json();
     return sas;
   }
