@@ -1,9 +1,10 @@
 export default class JsonService {
-  apiBase = "http://localhost:3004";
+  //TOFIX
+  apiBase = "https://3004-b13cbb46-273f-4b3f-a690-ebc8facee863.ws-eu01.gitpod.io";
 
   async getResource(url='') {
     const result = await fetch(`${this.apiBase}${url}`);
-
+    
     if(!result.ok) {
       throw new Error (`Couldn't fetch ${url}, received ${result.status}`)
     }
@@ -12,8 +13,10 @@ export default class JsonService {
     return sas;
   }
 
-  async getAllPokemons() {
-    const result = await this.getResource(`/pokemons/`);
+  async getAllPokemons(count = 0) {
+    const pokemons = await this.getResource(`/pokemons/`);
+
+    const result = pokemons.slice(count, count + 10);
     return result;
   }
 
