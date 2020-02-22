@@ -1,6 +1,6 @@
 export default class JsonService {
   //TOFIX
-  apiBase = "http://localhost:3004";
+  apiBase = "https://3004-f4ed54bb-ed40-475e-8674-f5f69070dc9c.ws-eu01.gitpod.io";
 
   async getResource(url='') {
     const result = await fetch(`${this.apiBase}${url}`);
