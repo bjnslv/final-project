@@ -1,39 +1,37 @@
-import React from "react";
+import React, { useEffect } from "react";
 import{ Switch, Route, BrowserRouter as Router} from 'react-router-dom';
 import Home from "../Home/HomeContainer";
-import Collection from "../Collection/Collection"
+import Collection from "../Collection/CollectionContainer"
 import Nav from "../Nav/Nav";
-import Pokemon from "../Pokemon/Pokemon";
-
+import Pokemon from "../Pokemon/PokemonContainer";
 import { getPokemons } from "../../redux/actions";
-
 import store from '../../redux/reducer';
 
-store.dispatch(getPokemons());
-
 const App = () => {
-  return (
-    <Router>
-      <div className="App">
-        <Nav />
-        <Switch>  
+    useEffect(() => {
+        store.dispatch(getPokemons(0));
+    }, []);
 
-        <Route path="/" exact render = {
-          () => <Home />
-        }/>
+    return (
+        <Router>
+            <div className="App">
+                <Nav />
+                <Switch>  
+                    <Route path="/" exact render = {
+                        () => <Home />
+                    }/>
 
-        <Route path="/collection" render={
-          () => <Collection />
-        }/>
+                    <Route path="/collection" render={
+                        () => <Collection />
+                    }/>
 
-        <Route path="/pokemon/:name" render={
-          () => <Pokemon />
-        } />
-
-        </Switch>
-      </div>
-    </Router>
-  );
+                    <Route path="/pokemon/:name" render={
+                        () => <Pokemon />
+                    } />
+                </Switch>
+            </div>
+        </Router>
+    );
 }
 
 export default App;

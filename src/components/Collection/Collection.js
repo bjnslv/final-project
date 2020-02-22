@@ -1,10 +1,19 @@
 import React from "react";
+import Card from "../Card/Card";
 
-const Collection = ({pokemonObjects}) => {
+const Collection = ({ pokemons, selectPokemon }) => {
+ const elements = pokemons.map(item => {
+    return <Card 
+        {...item} 
+        key={item.id}
+        selectPokemon= {(desc) => selectPokemon(desc)}
+        />;
+  });
+
   return (
-    <h1>
-      11111
-    </h1>
+    <div className="d-flex flex-wrap w-100 justify-content-center" id="main">
+    {elements}
+    </div>
   )
 }
 
