@@ -6,8 +6,9 @@ const mapDispatchToProps = (dispatch) => ({
     catchPokemon: (id) => dispatch(catchPokemon(id))
 });
 
-const mapStateToProps = ({ selected }) => ({
-    selected
+const mapStateToProps = ({ selected, pokemons }) => ({
+    selected,
+    pokemons
 });
 
 export default connect(

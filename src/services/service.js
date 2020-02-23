@@ -1,6 +1,6 @@
 export default class JsonService {
   //TOFIX
-  apiBase = "https://3004-f4ed54bb-ed40-475e-8674-f5f69070dc9c.ws-eu01.gitpod.io";
+  apiBase = "http://localhost:3004";
 
   async getResource(url='') {
     const result = await fetch(`${this.apiBase}${url}`);
@@ -16,7 +16,7 @@ export default class JsonService {
   async getAllPokemons(count = 0) {
     const pokemons = await this.getResource(`/pokemons/`);
 
-    const result = pokemons.slice(count, count + 10);
+    const result = pokemons.slice(count, count + 12);
     return result;
   }
 

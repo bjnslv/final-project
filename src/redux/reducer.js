@@ -19,7 +19,7 @@ const reducer = (state = initialState, { type, payload }) => {
                     }));
             const result = {
                 pokemons:  [...state.pokemons, ...loaded ],
-                count: state.count + 10
+                count: state.count + 12
             }
             return result;
 

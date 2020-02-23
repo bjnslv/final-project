@@ -12,31 +12,30 @@ const Pokemon = ({ selected, catchPokemon }) => {
     const srcImg = `../../../pokemons/${id}.png`;
 
     return (
-        <>
-         <div className="card text-center m-3">
+        <div className="d-flex flex-wrap w-100 justify-content-center" id="main">
+            <div className="card text-center m-3">
 
-            {/* <img src={`${srcImg}`} className="card-img-top" alt={name}/>
+                <img src={`${srcImg}`} className="card-img-top" alt={name}/>
 
                 <div className="card-body">
                     <h5 className="card-title">
-                        {`${id}. ${name}`}
-                    </h5>
-                     <p className="card-text">{catchDate}</p>
-                </div> */}
-
-                <h1>{name}</h1>
-
-                <button 
+                        {`${id}. ${name.toUpperCase()}`}
+                     </h5>
+                    <p className="card-text">
+                        {isCatched ? `${`Was caught on ${catchDate.toLocaleString()}`}` : ''}
+                    </p>
+                    {/* <button 
                     className={isCatched ? "btn btn-danger disabled" : "btn btn-danger"} 
                     disabled={isCatched ? true : false }
                     onClick={() => catchPokemon(id)}
-                >
+                    >
                     { isCatched ? "Caugth" : "Catch" }
-                </button>
-
+                    </button> */}
+                </div>
             </div>
-        </>
+        </div>
+         
     )
 }
 
-export default Pokemon
+export default Pokemon;
