@@ -1,5 +1,4 @@
 export default class JsonService {
-  //TOFIX
   apiBase = "http://localhost:3004";
 
   async getResource(url='') {
