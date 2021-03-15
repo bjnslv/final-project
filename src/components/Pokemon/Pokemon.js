@@ -24,13 +24,13 @@ const Pokemon = ({ selected, catchPokemon }) => {
                     <p className="card-text">
                         {isCatched ? `${`Was caught on ${catchDate.toLocaleString()}`}` : ''}
                     </p>
-                    {/* <button 
+                    <button 
                     className={isCatched ? "btn btn-danger disabled" : "btn btn-danger"} 
                     disabled={isCatched ? true : false }
                     onClick={() => catchPokemon(id)}
                     >
                     { isCatched ? "Caugth" : "Catch" }
-                    </button> */}
+                    </button>
                 </div>
             </div>
         </div>

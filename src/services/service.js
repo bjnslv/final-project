@@ -1,6 +1,5 @@
 export default class JsonService {
-  apiBase = "http://localhost:3004";
-
+  apiBase = "http://localhost:3000"
   async getResource(url='') {
     const result = await fetch(`${this.apiBase}${url}`);
     
